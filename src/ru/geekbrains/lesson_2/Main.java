@@ -19,10 +19,10 @@ public class Main {
         System.out.println(" ");
         System.out.println("Задание 2:");
         int[] arr2 = new int[8];
-            int j = 0;
+            int z = 0;
             for (int i = 0; i < arr2.length; i++) {
-                arr2[i] = j;
-                j+=3;
+                arr2[i] = z;
+                z+=3;
                 System.out.print(arr2[i] + " ");
             }
 
@@ -35,6 +35,21 @@ public class Main {
                 arr3[i] = arr3[i] * 2;
             }
             System.out.print(arr3[i] + " ");
+        }
+
+        //Task 4
+        System.out.println(" ");
+        System.out.println("Задание 4:");
+        int[][] arr4 = new int[4][4];
+        //int[] arr41 = new int[4];
+        for (int i = 0; i < arr4.length; i++){
+            for (int j = 0; j < arr4[i].length; j++){
+                if (i == j) {
+                    arr4[i][j] = 1;
+                }
+                System.out.print(arr4[i][j] + "\t");
+            }
+            System.out.println();
         }
 
     }
