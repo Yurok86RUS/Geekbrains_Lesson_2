@@ -52,5 +52,22 @@ public class Main {
             System.out.println();
         }
 
+        //Task 5
+        System.out.println(" ");
+        System.out.println("Задание 5:");
+        int[] arr5 = {1,5,45,1,652,58,41,28,8,21,88,12};
+        int min = arr5[0];
+        int max = arr5[0];
+        for (int i = 1; i < arr5.length; i++) {
+            if (arr5[i] < min) {
+                min = arr5[i];
+            }
+            if (arr5[i] > max) {
+                max = arr5[i];
+            }
+        }
+        System.out.println("Минимальное значение: " + min);
+        System.out.println("Максимальное значение: " + max);
+
     }
 }
