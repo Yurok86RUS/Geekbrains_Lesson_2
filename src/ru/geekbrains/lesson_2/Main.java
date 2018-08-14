@@ -69,5 +69,27 @@ public class Main {
         System.out.println("Минимальное значение: " + min);
         System.out.println("Максимальное значение: " + max);
 
+        //Task 6
+        System.out.println(" ");
+        System.out.println("Задание 6:");
+        int[] arr6 = {1, 1, 1, 2, 1};
+
+        System.out.println(checkArr(arr6));
     }
+
+    public static boolean checkArr(int[] arr){
+        int tmp = arr[0];
+        for (int i =1; i < arr.length; i++) {
+            int sum = 0;
+            for ( int j = i; j < arr.length; j++){
+                sum += arr[j];
+            }
+            if (tmp == sum) {
+                return true;
+            }
+            tmp += arr[i];
+        }
+        return false;
+    }
+
 }
