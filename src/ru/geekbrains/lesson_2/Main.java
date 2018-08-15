@@ -75,6 +75,14 @@ public class Main {
         int[] arr6 = {1, 1, 1, 2, 1};
 
         System.out.println(checkArr(arr6));
+
+        //Task 7
+        System.out.println(" ");
+        System.out.println("Задание 7:");
+        int[] incomingArray = {1,2,3,4,5,6,7,8,9,0};
+
+        //System.out.print(shiftArray(incomingArray, 5) + " ");
+
     }
 
     public static boolean checkArr(int[] arr){
@@ -92,4 +100,36 @@ public class Main {
         return false;
     }
 
+    public static int[] shiftArray(int[] incomingArray, int shift) {
+        if (shift != 0) {
+            int finalShift;
+            if (shift > incomingArray.length)
+                shift = Math.abs(shift % incomingArray.length);
+            else
+                finalShift = shift;
+            if (shift > 0) {
+                for (int n = 0; n < shift; n++) {
+                    int buffer = incomingArray[0];
+                    incomingArray[0] = incomingArray[incomingArray.length - 1];
+                    for (int j = 1; j < incomingArray.length - 1; j++) {
+                        incomingArray[incomingArray.length - j] = incomingArray[incomingArray.length - j - 1];
+                    }
+                    incomingArray[1] = buffer;
+                }
+            } else if (shift < 0) {
+                for (int i = 0; i > shift; shift--) {
+                    int buffer = incomingArray[incomingArray.length - 1];
+                    incomingArray[incomingArray.length - 1] = incomingArray[0];
+
+                    for (int j = 1; j < incomingArray.length - 1; j++) {
+                        incomingArray[j - 1] = incomingArray[j];
+                    }
+
+                    incomingArray[incomingArray.length - 2] = buffer;
+                }
+            }
+        }
+
+        return incomingArray;
+    }
 }
