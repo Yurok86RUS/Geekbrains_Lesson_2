@@ -47,6 +47,7 @@ public class Main {
                 if (i == j) {
                     arr4[i][j] = 1;
                 }
+                arr4[i][arr4.length - i - 1] = 1;
                 System.out.print(arr4[i][j] + "\t");
             }
             System.out.println();
